@@ -1,0 +1,50 @@
+/* --------------------------------------------------------------------------
+   components/services.css — tarjetas de servicio en grilla.
+   -------------------------------------------------------------------------- */
+
+.c-services {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+.c-service {
+  display: grid;
+  gap: var(--space-2xs);
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.c-service__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--space-2xs);
+  color: var(--color-brand-strong);
+  background-color: var(--color-brand-soft);
+  border-radius: var(--radius-sm);
+}
+
+.c-service__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c-service__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+}
+
+.c-service__text {
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 48rem) {
+  .c-services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

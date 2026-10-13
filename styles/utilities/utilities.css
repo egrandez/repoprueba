@@ -1,0 +1,30 @@
+/* --------------------------------------------------------------------------
+   utilities/utilities.css — última capa: utilidades de una sola
+   responsabilidad. Ganan sobre los componentes.
+   -------------------------------------------------------------------------- */
+
+.u-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-on-brand);
+  background-color: var(--color-brand-strong);
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.u-skip-link:focus {
+  left: 0;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

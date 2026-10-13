@@ -1,0 +1,64 @@
+/* --------------------------------------------------------------------------
+   components/header.css — cabecera fija con marca, navegación y CTA.
+   -------------------------------------------------------------------------- */
+
+.c-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(255 255 255 / 92%);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(8px);
+}
+
+.c-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-md);
+  padding-block: var(--space-sm);
+}
+
+.c-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand-strong);
+}
+
+.c-header__logo {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-brand);
+}
+
+.c-nav {
+  margin-inline-start: auto;
+}
+
+.c-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.c-nav__link {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-ink-soft);
+}
+
+.c-nav__link:hover {
+  color: var(--color-brand-strong);
+}
+
+.c-header__cta {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 40rem) {
+  .c-header__cta {
+    display: none;
+  }
+}
