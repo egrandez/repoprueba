@@ -1,0 +1,57 @@
+/* --------------------------------------------------------------------------
+   components/footer.css — pie con marca, enlaces y contacto.
+   -------------------------------------------------------------------------- */
+
+.c-footer {
+  padding-top: var(--space-xl);
+  color: var(--color-ink-soft);
+  background-color: var(--color-surface-strong);
+}
+
+.c-footer__inner {
+  display: grid;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+.c-footer__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand-strong);
+}
+
+.c-footer__tagline {
+  margin-top: var(--space-2xs);
+  max-width: 24rem;
+}
+
+.c-footer__list {
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.c-footer__link:hover {
+  color: var(--color-brand-strong);
+}
+
+.c-footer__contact-label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-ink);
+}
+
+.c-footer__contact-value {
+  overflow-wrap: anywhere;
+}
+
+.c-footer__legal {
+  padding-block: var(--space-md);
+  font-size: var(--font-size-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 48rem) {
+  .c-footer__inner {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
